@@ -11,11 +11,7 @@ declare(strict_types=1);
  */
 namespace Hyperf\ConfigCenter\Contract;
 
-interface DriverInterface
+interface PipeMessageInterface
 {
-    public function fetchConfig();
-
-    public function createMessageFetcherLoop(): void;
-
-    public function onPipeMessage(object $event): void;
+    public function getData(): array;
 }

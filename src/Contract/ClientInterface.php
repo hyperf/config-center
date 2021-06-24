@@ -11,11 +11,10 @@ declare(strict_types=1);
  */
 namespace Hyperf\ConfigCenter\Contract;
 
-interface DriverInterface
+interface ClientInterface
 {
-    public function fetchConfig();
-
-    public function createMessageFetcherLoop(): void;
-
-    public function onPipeMessage(object $event): void;
+    /**
+     * Pull the config values from configuration center, and then update the Config values.
+     */
+    public function pull(): array;
 }
